@@ -1,27 +1,24 @@
-import org.junit.Test;
+package com.people;
 
-class Boy extends Male {
+class Female extends Human {
     private final double weight;
     private final double height;
 
-    public Boy(double weight, double height) {
-        super(weight, height);
+    public Female(double weight, double height) {
         this.weight = weight;
         this.height = height;
     }
 
-
-    @Override
     double weightCount() {
-        return (height - 100) - (height - 150) / 4;
+        return (height - 100) - (height - 150)/2;
     }
 
-    @Override
     void idealWeight() {
+
         if (weight > weightCount()) {
-            System.out.println("get down  " + (weight - weightCount()));
+            System.out.println("get down  " + (weight - weightCount()) + " kg");
         } else if (weightCount() > weight) {
-            System.out.println("get up " + (weightCount() - weight));
+            System.out.println("get up " + (weightCount() - weight) + " kg");
         } else {
             System.out.println("you have a perfect weight");
         }

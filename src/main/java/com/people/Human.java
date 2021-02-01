@@ -1,4 +1,4 @@
-import org.junit.Test;
+package com.people;
 
 public abstract class Human {
 
